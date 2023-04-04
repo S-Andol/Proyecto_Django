@@ -7,8 +7,6 @@ Abro terminal y colocamos pwd
 # Clonamos los archivos del GitHub
     git clone https://github.com/S-Andol/Proyecto_Django.git
 
-21:26
-
 # Creamos un entorno virtual
 
 python -m venv venv
@@ -86,3 +84,39 @@ Si entramos en db.sqlite3 podemos observar las 18 migraciones...
 # git status
 
 # git push (lo subimos)
+
+
+# A modo de muestra:
+    # Creamos en urls.py un camino - path
+
+    path("van argumentos") 
+    path('',"vista"),
+    Agregamos:
+    path('',mi_vista),
+
+    # Agregamos un nuevo archivo dentro de "proyecto_django"
+
+    Creamos views.py y escribimos dentro una funcion.
+
+    def mi_vista(request):
+        return ...
+    
+    # Creamos el import para llamarlo
+        
+        Creamos dentro de urls.py
+            from proyecto_django.views import mi_vista
+
+    # Traemos un httpResponse a mi_vista
+        
+        Agregamos arriba de la funcion def...
+
+        from django.http import HttpResponse
+
+        y modificamos el return...
+
+        def mi_vista(request):
+            return HttpResponse('<h1>Mi Primera Vista</h1>')
+
+
+1:36:00
+

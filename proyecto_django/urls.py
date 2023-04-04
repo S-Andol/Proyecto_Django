@@ -15,7 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+# from proyecto_django.views import mi_vista, mostrar_fecha
+# otra forma de pedir eso:
+from proyecto_django import views
+
 
 urlpatterns = [
+    # path('',mi_vista),
+    path ('', views.mi_vista),
+    # Pero al hacer eso tambien tenemos que modificar los path
+    # path('mostrar-fecha/', mostrar_fecha),
+    path('mostrar-fecha/', views.mostrar_fecha),
+    path('saludar/<str:nobre>/<str:apellido>', views.saludar),
+    path('mi-primer-template/', views.mi_primer_template),
     path('admin/', admin.site.urls),
 ]
